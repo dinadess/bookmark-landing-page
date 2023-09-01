@@ -15,4 +15,4 @@
 .DS_Store
 
 node_modules
-README-template.md
+package-lock.json

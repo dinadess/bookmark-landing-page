@@ -54,7 +54,6 @@ const setActiveTab = function (e) {
   const clickedBtn = e?.target.closest('.tab-btn');
 
   if (window.matchMedia('(max-width: 767px)').matches) {
-    console.log('Small screen');
     if (activeTab) {
       tabCursor.style.width = `150px`;
       tabCursor.style.top = `${
@@ -80,15 +79,14 @@ const setActiveTab = function (e) {
       const activeContent = clickedBtn.getAttribute('aria-controls');
       document.getElementById(activeContent).removeAttribute('hidden');
 
-      tabCursor.style.width = `150px`;
+      tabCursor.style.width = '150px';
       tabCursor.style.top = `${
         clickedBtn.clientHeight + clickedBtn.offsetTop - 2
       }px`;
-      tabCursor.style.bottom = `${0}px`;
+      tabCursor.style.bottom = 0;
       tabCursor.style.left = `50%`;
     }
   } else {
-    console.log('large screen');
     if (activeTab) {
       tabCursor.style.width = `${activeTab.offsetWidth}px`;
       tabCursor.style.bottom = `${activeTab.offsetTop}px`;
@@ -125,7 +123,6 @@ window.addEventListener('resize', function () {
 });
 
 faqContainer.addEventListener('click', function (e) {
-  console.log(e.target.closest('.accordion-btn'));
   const clickedAccordion = e.target.closest('.accordion-btn');
 
   if (!clickedAccordion) return;
