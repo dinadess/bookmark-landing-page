@@ -109,12 +109,12 @@ a:focus,
 
   content: '';
   display: inline-block;
-  width: 105%;
+  width: 115%;
   height: 100%;
   border-radius: 0 250px 250px 0;
   position: absolute;
   top: 20%;
-  left: -20%;
+  left: -30%;
   z-index: -1;
 }
 
