@@ -48,16 +48,25 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project was a challenge for me to build accessible components as there were some common ones on the design : a tab section and an accordion for the FAQ.
+
+When I first discovered Tailwind CSS, I only used it to build SPAs with VueJS. But when I saw the design of the website, I found it a bit "Tailwindish" so I went for TailwindCSS as the styling framework instead of vanilla CSS. Doing so, I've learned to set up a full HTML project with Tailwind CSS and customize the config file with the viewport widths.
+
+I've also learned how to create an accessible tab section and I've struggled to find out how to write the JS code to make it responsive. For context, there's a marker to show the active tab and as the screen size goes from mobile to desktop and vice versa, the vertical alignment also changes. So, I had to write the code to make the cursor position itself on page load depending on the viewport width and also when the window is resized or when the phone orientation changes.
+Next thing I learned, though I've built some in the past is how to make an accessible accordion. Here, I've made use of the aria roles aria-expanded and aria-controls.
+
+Finally, I've learned how to make an animation on opening and closing the mobile navigation. The first solution I came up with was using the display property and was working fine, but as I wanted to create an animation on the menu and as the display property can not be animated, I had to resort to Kevin Powell's solution (see link below) by creating an intermediate state during which the animation was performed. Just after the animation is over (listened to the animationend event through an event listener), I have added the final state which implies setting the display property to none.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I used regex to perform the form validation on the email input and I saw that there's still a lot to learn. So, I'll try to focus on it in future projects.
+
+Create a fullscreen navigation on mobile screens and adjust it to take up the max-content height when on landscape orientation, instead of cropping the nav.
 
 ### Useful resources
 
-- [Build an accessible mobile menu | Kevin Powell on Youtube](https://www.youtube.com/watch?v=YAqRQoN8ykI) - I really wanted to include accessibility and this video really helped me to realise it.
-- [ARIA Tab Role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) - This is an amazing article on MDN which helped me build an accessible tab section.
+- [Build an accessible mobile menu | Kevin Powell on Youtube](https://www.youtube.com/watch?v=YAqRQoN8ykI) - Helped me create the animation when opening and closing the mobile menu along with the accessibility part as well.
+- [ARIA Tab Role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) - I used this MDN article to build the tab section.
 
 ## Author
 
